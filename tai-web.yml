@@ -1,0 +1,15 @@
+http:
+  routers:
+    tai-web-router:
+      rule: "Host(`duongthetai.site`, `www.duongthetai.site`)"
+      entryPoints:
+        - websecure
+      service: tai-web-service
+      tls:
+        certResolver: letsencrypt
+
+  services:
+    tai-web-service:
+      loadBalancer:
+        servers:
+          - url: "http://tai-web:80"

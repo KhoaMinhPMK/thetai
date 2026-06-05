@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  tai-web:
+    build: .
+    image: tai-web:latest
+    container_name: tai-web
+    restart: always
+    networks:
+      - sankit_network
+
+networks:
+  sankit_network:
+    external: true
