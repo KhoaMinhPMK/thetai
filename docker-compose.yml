@@ -7,8 +7,8 @@ services:
     container_name: tai-web
     restart: always
     networks:
-      - sankit_network
+      - proxy
 
 networks:
-  sankit_network:
+  proxy:
     external: true

@@ -1,7 +1,7 @@
 http:
   routers:
     tai-web-router:
-      rule: "Host(`duongthetai.site`, `www.duongthetai.site`)"
+      rule: "Host(`duongthetai.site`) || Host(`www.duongthetai.site`)"
       entryPoints:
         - websecure
       service: tai-web-service

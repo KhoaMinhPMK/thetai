@@ -61,6 +61,7 @@ const translations = {
 
 const EDIT_MODE = "off";
 const MEDIA_OVERRIDE_STORAGE_KEY = "duong-the-tai-media-overrides-v1";
+const GALLERY_STORAGE_KEY = "duong-the-tai-gallery-overrides-v1";
 const MEDIA_OVERRIDES = {
   // Example for deployment:
   // "academics-gpa": "./assets/new-gpa.jpg",
@@ -97,94 +98,125 @@ const mediaLibrary = [
   {
     keys: ["MEALNIMALS", "GroWarriors", "STARTUP ZONE"],
     title: "Mealnimals / GroWarriors",
-    url: "./Drive%20For%20Portfolio%20Website/Mealnimals%203.1/Qua%CC%81n%20Qua%CC%82n%20HRS.jpeg",
+    url: "./Drive%20For%20Portfolio%20Website/Mealnimals_3.1/Quan_Quan_HRS.jpeg",
   },
   {
     keys: ["VILAW", "LEGIS", "LegalTech"],
     title: "VILAW LEGIS AI",
-    url: "./Drive%20For%20Portfolio%20Website/Vilaw%20Legis%20AI%203.2/Qua%CC%81n%20Qua%CC%82n%20UII.jpeg",
+    url: "./Drive%20For%20Portfolio%20Website/Vilaw_Legis_AI_3.2/Quan_Quan_UII.jpeg",
+    gallery: [
+      "./Drive%20For%20Portfolio%20Website/Vilaw_Legis_AI_3.2/Innovation_Quest_2.jpg",
+      "./Drive%20For%20Portfolio%20Website/Vilaw_Legis_AI_3.2/UII.jpeg",
+      "./Drive%20For%20Portfolio%20Website/Vilaw_Legis_AI_3.2/Innovation_Quest.jpg",
+    ],
   },
   {
     keys: ["CONT-TECT", "Digiport", "Motion Masters"],
     title: "Cont-Tect Motion Masters",
-    url: "./Drive%20For%20Portfolio%20Website/CONT-TECT%20-%20Motion%20Masters%20/MOTION%20MASTERS%20VIDEO%20PROTOTYPE.mp4",
-    poster: "./Drive%20For%20Portfolio%20Website/Camaco%203.11/Camaco%20win.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS_VIDEO_PROTOTYPE.mp4",
+    poster: "./Drive%20For%20Portfolio%20Website/Camaco_3.11/Camaco_win.jpg",
+    gallery: [
+      "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS.mp4",
+      "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS___FINALE_ROUND___CONTTECT.pdf",
+    ],
   },
   {
     keys: ["MEAL-KIT", "VECOM", "KINH DOANH SỐ"],
     title: "Meal-Kit E-commerce Platform",
-    url: "./Drive%20For%20Portfolio%20Website/MealKit%203.4.JPG",
+    url: "./Drive%20For%20Portfolio%20Website/MealKit_3.4.JPG",
   },
   {
     keys: ["MANAGEMENT TRAINEE", "NHÂN SỰ TÀI NĂNG", "HRS"],
     title: "Management Trainee Challenge",
-    url: "./Drive%20For%20Portfolio%20Website/QQ%20HR%20Regenz%203.12/IMG_20240507_221608.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/QQ_HR_Regenz_3.12/IMG_20240507_221608.jpg",
   },
   {
     keys: ["OVINA", "COOP", "FARM-TO-TABLE"],
     title: "OVINA / COOP Challenge",
-    url: "./Drive%20For%20Portfolio%20Website/COOP%203.6/Qua%CC%81n%20Qua%CC%82n%20COOP.JPG",
+    url: "./Drive%20For%20Portfolio%20Website/COOP_3.6/Quan_Quan_COOP.JPG",
   },
   {
     keys: ["AGROBRICK", "FTU"],
     title: "Agrobrick",
-    url: "./Drive%20For%20Portfolio%20Website/Agrobrick%203.7/Qua%CC%81n%20Qua%CC%82n%20FTU2.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/Agrobrick_3.7/Quan_Quan_FTU2.jpg",
+    gallery: [
+      "./Drive%20For%20Portfolio%20Website/Agrobrick_3.7/STartup_wheels.png",
+      "./Drive%20For%20Portfolio%20Website/Agrobrick_3.7/QQ_ftu_2.jpg",
+    ],
   },
   {
     keys: ["PUREVIA", "TDTU", "Eggshell"],
     title: "Purevia",
-    url: "./Drive%20For%20Portfolio%20Website/Purevia%20-%203.8/TDTU.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/Purevia_-_3.8/TDTU.jpg",
+    gallery: [
+      "./Drive%20For%20Portfolio%20Website/Purevia_-_3.8/Quy_Quan_TDTU.jpg",
+      "./Drive%20For%20Portfolio%20Website/Purevia_-_3.8/TDTU_quy_quan.jpg",
+    ],
   },
   {
     keys: ["5T", "GPA"],
     title: "Academic evidence",
-    url: "./Drive%20For%20Portfolio%20Website/5T%203.9/5T.jpeg",
+    url: "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
+    gallery: [
+      "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.mp4",
+      "./Drive%20For%20Portfolio%20Website/5T_3.9/GPA.jpg",
+    ],
   },
   {
     keys: ["CAMACO"],
     title: "Camaco",
-    url: "./Drive%20For%20Portfolio%20Website/Camaco%203.11/Camaco.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/Camaco_3.11/Camaco.jpg",
+    gallery: [
+      "./Drive%20For%20Portfolio%20Website/Camaco_3.11/Camaco_win.jpg",
+    ],
   },
   {
     keys: ["BRAINWAVE", "AETERNA", "CICSIC"],
     title: "BrainWave / AETERNA",
-    url: "./Drive%20For%20Portfolio%20Website/BrainWave%203.13/Brainwave.jpeg",
+    url: "./Drive%20For%20Portfolio%20Website/BrainWave_3.13/Brainwave.jpeg",
   },
   {
     keys: ["DEBATE"],
     title: "Debate",
-    url: "./Drive%20For%20Portfolio%20Website/3.14%20Debate/Quy%CC%81%20Qua%CC%82n%20Debate%20KQM.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/3.14_Debate/Quy_Quan_Debate_KQM.jpg",
   },
   {
     keys: ["EQUAL VOICE"],
     title: "Equal Voice",
-    url: "./Drive%20For%20Portfolio%20Website/3.15%20Equal%20Voice/Quy%CC%81%20qua%CC%82n%20Equalvoice.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/3.15_Equal_Voice/Quy_quan_Equalvoice.jpg",
   },
   {
     keys: ["UNISTAY"],
     title: "Unistay operations",
-    url: "./Drive%20For%20Portfolio%20Website/5T%203.9/5T.jpeg",
+    url: "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
   },
   {
     keys: ["EDUTYNKER", "TYNKER"],
     title: "EduTynker digital system",
-    url: "./Drive%20For%20Portfolio%20Website/BrainWave%203.13/Ivennio.jpeg",
+    url: "./Drive%20For%20Portfolio%20Website/BrainWave_3.13/Ivennio.jpeg",
   },
   {
     keys: ["VOLUNTEER", "IBP002", "AIESEC", "VSIC", "L.A.E", "HRS"],
     title: "Leadership archive",
-    url: "./Drive%20For%20Portfolio%20Website/QQ%20HR%20Regenz%203.12/FB_IMG_1715154238230.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/QQ_HR_Regenz_3.12/FB_IMG_1715154238230.jpg",
+    gallery: [
+      "./Drive%20For%20Portfolio%20Website/QQ_HR_Regenz_3.12/FB_IMG_1715154232592.jpg",
+      "./Drive%20For%20Portfolio%20Website/QQ_HR_Regenz_3.12/1HTC7UQVC_5LBTB1.jpg",
+      "./Drive%20For%20Portfolio%20Website/QQ_HR_Regenz_3.12/1HTC7UQHQ_5LBTB1.jpg",
+      "./Drive%20For%20Portfolio%20Website/QQ_HR_Regenz_3.12/IMG_20240507_221608.jpg",
+      "./Drive%20For%20Portfolio%20Website/QQ_HR_Regenz_3.12/1HTC7UQ6D_5LBTB1.jpg",
+    ],
   },
   {
     keys: ["LOGISTICS", "CẢNG", "CHUỖI CUNG ỨNG"],
     title: "Logistics analysis",
-    url: "./Drive%20For%20Portfolio%20Website/CONT-TECT%20-%20Motion%20Masters%20/MOTION%20MASTERS%20_%20FINALE%20ROUND%20_%20CONTTECT.pdf",
+    url: "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS___FINALE_ROUND___CONTTECT.pdf",
   },
 ];
 
 const fallbackMedia = {
   title: "Portfolio evidence",
-  url: "./Drive%20For%20Portfolio%20Website/5T%203.9/5T.jpeg",
+  url: "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
 };
 
 function applyLanguage() {
@@ -281,7 +313,7 @@ function isSectionHeading(line, key) {
   if (!clean) return false;
   if (key === "cases") return /^3\.\d+\./.test(clean);
   if (key === "ventures") return /^(\[VENTURE\s+\d+\]|\[LOG\s+\d+\]|[12]\.\s|[A-ZÀ-Ỹ].*\(CORE VENTURES\))/i.test(clean);
-  if (key === "journal") return /^(\d+\.\s|BLOG\s+\d+:)/i.test(clean);
+  if (key === "journal") return /^BLOG\s+\d+:/i.test(clean);
   return false;
 }
 
@@ -315,9 +347,18 @@ function splitIntoSections(text, key, title) {
   const lines = text.replace(/\r\n/g, "\n").split("\n");
   const sections = [];
   let current = { displayTitle: title, lines: [] };
+  let journalBlogStarted = false;
 
   lines.forEach((line) => {
-    if (isSectionHeading(line, key)) {
+    let isHeading = isSectionHeading(line, key);
+    if (key === "journal") {
+      const clean = normalizeHeading(line);
+      const isBlogHeading = /^BLOG\s+\d+:/i.test(clean);
+      if (isBlogHeading) journalBlogStarted = true;
+      isHeading = isBlogHeading || (!journalBlogStarted && /^\d+\.\s/.test(clean));
+    }
+
+    if (isHeading) {
       if (current.lines.some((item) => item.trim())) sections.push(current);
       current = { displayTitle: normalizeHeading(line), lines: [] };
       return;
@@ -357,6 +398,39 @@ function findMedia(section) {
   );
 }
 
+function getStoredGalleries() {
+  try {
+    return JSON.parse(localStorage.getItem(GALLERY_STORAGE_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function writeStoredGallery(key, items) {
+  const galleries = getStoredGalleries();
+  if (items.length) galleries[key] = items;
+  else delete galleries[key];
+  localStorage.setItem(GALLERY_STORAGE_KEY, JSON.stringify(galleries));
+}
+
+function getMediaTypeFromUrl(url) {
+  if (/\.mp4($|\?)/i.test(url)) return "video";
+  if (/\.pdf($|\?)/i.test(url)) return "pdf";
+  return "image";
+}
+
+function getProjectGallery(media, galleryKey) {
+  const builtInItems = (media.gallery || []).map((url, index) => ({
+    title: `${media.title} material ${index + 1}`,
+    url,
+  }));
+  const storedItems = (getStoredGalleries()[galleryKey] || []).map((item, index) => ({
+    title: item.title || `Uploaded material ${index + 1}`,
+    url: item.url,
+  }));
+  return [...builtInItems, ...storedItems];
+}
+
 function getProjectCategory(section) {
   const haystack = `${section.title}\n${section.lines.join("\n")}`.toUpperCase();
   if (/MEALNIMALS|VILAW|STARTUP|VENTURE|UNISTAY|EDUTYNKER/.test(haystack)) return "venture";
@@ -369,7 +443,7 @@ function renderMediaElement(media, mediaId) {
   const frame = document.createElement("div");
   frame.className = "dossier-media-frame";
 
-  if (media.url.endsWith(".mp4")) {
+  if (getMediaTypeFromUrl(media.url) === "video") {
     const video = document.createElement("video");
     video.dataset.mediaId = mediaId;
     video.muted = true;
@@ -383,7 +457,7 @@ function renderMediaElement(media, mediaId) {
     source.type = "video/mp4";
     video.appendChild(source);
     frame.appendChild(video);
-  } else if (media.url.endsWith(".pdf")) {
+  } else if (getMediaTypeFromUrl(media.url) === "pdf") {
     frame.classList.add("pdf-media-frame");
     const card = document.createElement("a");
     card.className = "pdf-media-card";
@@ -417,8 +491,9 @@ function renderMediaElement(media, mediaId) {
   return frame;
 }
 
-function appendTextLines(root, lines) {
+function appendTextLines(root, lines, options = {}) {
   let buffer = [];
+  const cleanLine = (line) => (options.preserveEmoji ? line.trim() : stripEmoji(line));
 
   const flush = () => {
     if (!buffer.length) return;
@@ -429,7 +504,7 @@ function appendTextLines(root, lines) {
   };
 
   lines.forEach((line) => {
-    const clean = stripEmoji(line);
+    const clean = cleanLine(line);
     if (!clean) {
       flush();
       return;
@@ -626,11 +701,13 @@ async function renderDossiers() {
 }
 
 function renderSkills() {
-  const root = document.getElementById("skill-list");
-  skills.forEach((skill) => {
-    const item = document.createElement("span");
-    item.textContent = skill;
-    root.appendChild(item);
+  document.querySelectorAll("[data-skill-list]").forEach((root) => {
+    root.innerHTML = "";
+    skills.forEach((skill) => {
+      const item = document.createElement("span");
+      item.textContent = skill;
+      root.appendChild(item);
+    });
   });
 }
 
@@ -786,6 +863,87 @@ function createMediaEditorPanel(media, key) {
   return panel;
 }
 
+function readFilesAsGalleryItems(files) {
+  return Promise.all(
+    [...files].map(
+      (file) =>
+        new Promise((resolve) => {
+          const reader = new FileReader();
+          reader.addEventListener("load", () => {
+            resolve({
+              title: file.name.replace(/\.[^.]+$/, ""),
+              url: String(reader.result || ""),
+            });
+          });
+          reader.readAsDataURL(file);
+        }),
+    ),
+  );
+}
+
+function createGalleryUploadForm(galleryKey, rerender) {
+  const form = document.createElement("form");
+  form.className = "post-gallery-editor";
+
+  const label = document.createElement("span");
+  label.textContent = "Edit gallery";
+
+  const fileInput = document.createElement("input");
+  fileInput.type = "file";
+  fileInput.accept = "image/*,video/*";
+  fileInput.multiple = true;
+
+  const uploadButton = document.createElement("button");
+  uploadButton.type = "button";
+  uploadButton.textContent = "Thêm nhiều file";
+  uploadButton.addEventListener("click", () => fileInput.click());
+
+  fileInput.addEventListener("change", async () => {
+    if (!fileInput.files?.length) return;
+    const currentItems = getStoredGalleries()[galleryKey] || [];
+    const nextItems = await readFilesAsGalleryItems(fileInput.files);
+    writeStoredGallery(galleryKey, [...currentItems, ...nextItems]);
+    rerender();
+  });
+
+  const clearButton = document.createElement("button");
+  clearButton.type = "button";
+  clearButton.textContent = "Xóa file đã upload";
+  clearButton.addEventListener("click", () => {
+    writeStoredGallery(galleryKey, []);
+    rerender();
+  });
+
+  form.append(label, uploadButton, clearButton, fileInput);
+  return form;
+}
+
+function renderPostGallery(media, sourceKey, index) {
+  const galleryRoot = document.getElementById("post-gallery");
+  const gallerySection = document.getElementById("post-gallery-section");
+  const galleryKey = `${sourceKey}-${index + 1}-gallery`;
+  const galleryItems = getProjectGallery(media, galleryKey);
+  galleryRoot.innerHTML = "";
+
+  if (editModeEnabled()) {
+    galleryRoot.appendChild(
+      createGalleryUploadForm(galleryKey, () => {
+        renderPostGallery(media, sourceKey, index);
+        initMediaEditor();
+      }),
+    );
+  }
+
+  galleryItems.forEach((item, itemIndex) => {
+    const card = document.createElement("article");
+    card.className = "post-gallery-card";
+    card.appendChild(renderMediaElement(item, `${galleryKey}-${itemIndex + 1}-media`));
+    galleryRoot.appendChild(card);
+  });
+
+  gallerySection.hidden = !editModeEnabled() && galleryItems.length === 0;
+}
+
 function initMediaEditor() {
   applyMediaOverrides();
   if (!editModeEnabled()) return;
@@ -830,7 +988,13 @@ async function init() {
   await renderDossiers();
   initMediaEditor();
   autoplayVideosWhenVisible();
-  setActiveView(location.hash.replace("#", "") || "home", false);
+  const initialHash = location.hash.replace("#", "") || "home";
+  if (initialHash.startsWith("post-")) {
+    const parts = initialHash.split("-");
+    if (parts.length >= 3) openSinglePost(parts[1], parseInt(parts[2], 10));
+  } else {
+    setActiveView(initialHash, false);
+  }
 }
 
 init().catch((error) => {
@@ -848,7 +1012,9 @@ function openSinglePost(sourceKey, index) {
   const main = document.getElementById("home");
   const postView = document.getElementById("single-post-view");
   const header = document.querySelector(".site-header");
+  const footer = document.querySelector(".site-footer");
   if (header) header.style.display = "none";
+  if (footer) footer.style.display = "none";
   main.style.display = "none";
   postView.style.display = "block";
   window.scrollTo(0, 0);
@@ -856,7 +1022,7 @@ function openSinglePost(sourceKey, index) {
   const media = findMedia(section);
   const mediaContainer = document.getElementById("post-media-container");
   mediaContainer.innerHTML = "";
-  mediaContainer.appendChild(renderMediaElement(media));
+  mediaContainer.appendChild(renderMediaElement(media, `${sourceKey}-${index + 1}-cover-media`));
 
   const readTime = Math.max(1, Math.floor(section.lines.length / 4));
   document.getElementById("post-meta").innerHTML = `📅 Dossier ${String(index + 1).padStart(2, "0")} <span style="opacity: 0.5; margin: 0 8px;">|</span> ⏱️ ${readTime} phút đọc`;
@@ -868,14 +1034,18 @@ function openSinglePost(sourceKey, index) {
 
   const body = document.getElementById("post-body");
   body.innerHTML = "";
-  appendTextLines(body, section.lines);
+  appendTextLines(body, section.lines, { preserveEmoji: true });
+  renderPostGallery(media, sourceKey, index);
+  initMediaEditor();
 }
 
 function closeSinglePost() {
   document.getElementById("home").style.display = "block";
   document.getElementById("single-post-view").style.display = "none";
   const header = document.querySelector(".site-header");
+  const footer = document.querySelector(".site-footer");
   if (header) header.style.display = "flex";
+  if (footer) footer.style.display = "";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
