@@ -302,6 +302,12 @@ function stripEmoji(text) {
     .trim();
 }
 
+function toTitleCase(str) {
+  return str.toLowerCase().split(' ').map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }).join(' ');
+}
+
 function normalizeHeading(line) {
   return stripEmoji(line)
     .replace(/^[\s\-–—•\u{1F539}]+/u, "")
@@ -498,7 +504,7 @@ function appendTextLines(root, lines, options = {}) {
   const flush = () => {
     if (!buffer.length) return;
     const paragraph = document.createElement("p");
-    paragraph.textContent = buffer.join(" ");
+    paragraph.innerHTML = buffer.map(escapeHtml).join("<br>");
     root.appendChild(paragraph);
     buffer = [];
   };
@@ -558,7 +564,8 @@ function createDossier(section, index, sourceKey) {
 
   const title = document.createElement("h3");
   title.className = "dossier-title";
-  title.textContent = normalizeHeading(section.title);
+  let finalTitle = stripSectionPrefix(normalizeHeading(section.title));
+  title.textContent = toTitleCase(finalTitle);
 
   const summary = document.createElement("p");
   summary.className = "dossier-summary";
@@ -1027,7 +1034,8 @@ function openSinglePost(sourceKey, index) {
   const readTime = Math.max(1, Math.floor(section.lines.length / 4));
   document.getElementById("post-meta").innerHTML = `📅 Dossier ${String(index + 1).padStart(2, "0")} <span style="opacity: 0.5; margin: 0 8px;">|</span> ⏱️ ${readTime} phút đọc`;
   
-  document.getElementById("post-title").textContent = normalizeHeading(section.title);
+  let finalPostTitle = stripSectionPrefix(normalizeHeading(section.title));
+  document.getElementById("post-title").textContent = toTitleCase(finalPostTitle);
 
   const tagStr = (section.title.split(" ")[0] || "Portfolio").replace(/[^a-zA-Z]/g, '').toLowerCase() || "portfolio";
   document.getElementById("post-tags").innerHTML = `<span class="dossier-tag">${tagStr}</span><span class="dossier-tag">case study</span>`;
