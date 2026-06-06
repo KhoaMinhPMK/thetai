@@ -127,8 +127,8 @@ const mediaLibrary = [
     title: "Cont-Tect Motion Masters",
     url: "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
     gallery: [
-      "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS.mp4",
-      "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS___FINALE_ROUND___CONTTECT.pdf",
+      "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
+      "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
     ],
   },
   {
@@ -169,7 +169,7 @@ const mediaLibrary = [
     title: "Academic evidence",
     url: "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
     gallery: [
-      "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.mp4",
+      "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
       "./Drive%20For%20Portfolio%20Website/5T_3.9/GPA.jpg",
     ],
   },
