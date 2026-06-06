@@ -125,8 +125,7 @@ const mediaLibrary = [
   {
     keys: ["CONT-TECT", "Digiport", "Motion Masters"],
     title: "Cont-Tect Motion Masters",
-    url: "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS_VIDEO_PROTOTYPE.mp4",
-    poster: "./Drive%20For%20Portfolio%20Website/Camaco_3.11/Camaco_win.jpg",
+    url: "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
     gallery: [
       "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS.mp4",
       "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS___FINALE_ROUND___CONTTECT.pdf",
