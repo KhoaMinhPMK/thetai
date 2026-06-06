@@ -560,3 +560,28 @@ Việc kết hợp tranh biện với nghệ thuật biểu diễn đã cho tôi
 "People may remember your data for a moment, but they remember how your story made them feel for a lifetime."
 
 
+3.15. CUỘC THI ĐỔI MỚI SÁNG TẠO SINH VIÊN QUỐC TẾ TRUNG QUỐC 2026
+🏆 AETERNA – TỪ ĐỘNG LỰC TỐI ƯU SỐ HÓA ĐẾN HÀNH TRÌNH CHINH PHỤC THỊ TRƯỜNG GIẢI TRÍ ĐA QUỐC GIA
+📌 Tổng quan dự án
+Project AETERNA là một dự án kết hợp giữa công nghệ tối ưu hóa trò chơi (game optimization) và chiến lược thương mại hóa quốc tế nhằm thâm nhập vào thị trường giải trí kỹ thuật số Đông Nam Á. Không dừng lại ở một sản phẩm giải trí đơn thuần, AETERNA hướng tới việc tái cấu trúc trải nghiệm người dùng trên không gian số thông qua các giải pháp tối ưu hệ thống mượt mà, từ đó tạo dựng một hệ sinh thái phân phối sản phẩm số có tính bản địa hóa cao cho tệp người dùng khu vực.
+
+🚀 Hành trình vươn tầm quốc tế năm 2026
+Diễn ra trong khuôn khổ Cuộc thi Đổi mới Sáng tạo Sinh viên Quốc tế Trung Quốc 2026 (CICSIC 2026) – phân khu Đông Nam Á, dự án đòi hỏi đội ngũ phải giải quyết một bài toán hóc búa về việc thâm nhập thị trường (Go-to-market strategy) xuyên biên giới. Đội ngũ phát triển đã liên tục thực hiện các chiến dịch tối ưu hóa sản phẩm số nhằm thích ứng với hạ tầng kỹ thuật đa dạng của các quốc gia trong khu vực. Đây là một cuộc dấn thân chiến lược cân não, nơi dự án phải vượt qua những rào cản khắt khe về mặt kiểm định của hội đồng giám khảo quốc tế để chứng minh tính khả thi cả về mặt công nghệ lẫn tiềm năng thương mại.
+
+👨‍💼 Vai trò của tôi: Trưởng nhóm Điều phối Chiến lược & Thương mại
+Trong dự án này, tôi đảm nhiệm vai trò Trưởng nhóm Điều phối Chiến lược & Thương mại (Strategy & Commercial Coordinator). Tôi đóng vai trò là gạch nối trọng yếu giữa đội ngũ kỹ thuật công nghệ giải thuật và khối kinh tế thương mại, trực tiếp dẫn dắt quá trình điều phối liên minh liên ngành giải bài toán thâm nhập thị trường khu vực cho dự án AETERNA. Vai trò này đòi hỏi tôi phải có tư duy nhạy bén để chuyển hóa các thông số kỹ thuật phức tạp thành một câu chuyện thương mại có cấu trúc chặt chẽ, bảo vệ thành công mô hình kinh doanh trước các hội đồng thẩm định quốc tế.
+
+⚙️ Những đóng góp nổi bật
+🔹 Điều phối liên minh liên ngành (Cross-functional Coordination)
+Trực tiếp điều phối và đồng bộ hóa tư duy làm việc giữa các chuyên gia công nghệ tối ưu hóa game (khối kỹ thuật) và các nhà hoạch định chiến lược kinh tế (khối thương mại). Sự can thiệp này giúp triệt tiêu hoàn toàn ma sát giao tiếp nội bộ, đưa toàn đội về một vector chiến lược chung và biến các tính năng phần cứng thành lợi thế cạnh tranh thương mại rõ rệt trên thị trường.
+🔹 Thiết kế chiến lược thâm nhập thị trường (Market Penetration Strategy)
+Nghiên cứu sâu về xu hướng dịch vụ số và hành vi người dùng tại thị trường Đông Nam Á để hỗ trợ xây dựng lộ trình phân phối sản phẩm kỹ thuật số (digital distribution) tinh gọn. Phân tích các kịch bản rủi ro vận hành chặng biên giới và đề xuất phương án tối ưu hóa mô hình nhằm chiếm lĩnh thị phần hiệu quả.
+🔹 Đồng bộ hóa tài liệu chiến lược & Brand Storytelling
+Chịu trách nhiệm xây dựng cấu trúc và đóng gói toàn bộ tài liệu tối ưu hóa, slide chiến lược và các câu chuyện thương hiệu (brand stories) của dự án. Việc chuẩn hóa và đồng bộ các tài liệu thương mại hóa này chính là chìa khóa giúp dự án thể hiện được tính chuyên nghiệp, mạch lạc và vượt qua các bar kiểm định vô cùng nghiêm ngặt của hội đồng giám khảo quốc tế.
+
+📈 Kết quả & Thành tích 
+🚀 Bảo vệ xuất sắc tài liệu marketing, brand story và giải pháp tối ưu hóa hệ thống trước hội đồng chuyên gia quốc tế. 
+🌏 Khẳng định năng lực cạnh tranh của giải pháp công nghệ Việt Nam trên đấu trường đổi mới sáng tạo quy mô khu vực.
+
+💭 Bài học lớn nhất tôi nhận được
+AETERNA giúp tôi hiểu rằng một giải pháp công nghệ hay sản phẩm số xuất sắc chỉ thực sự giải phóng được giá trị khi nó sở hữu một chuỗi cung ứng thông tin và một chiến lược thâm nhập thị trường không ma sát. Tối ưu hóa mã nguồn của một phần mềm hay tối ưu hóa quy trình kinh doanh xuyên biên giới đều có chung một bản ngã vận hành: đó là cuộc chiến tàn nhẫn để triệt tiêu lãng phí, bẻ gãy các điểm nghẽn hệ thống và mang lại trải nghiệm mượt mà nhất cho người dùng chặng cuối.

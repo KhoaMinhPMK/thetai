@@ -450,9 +450,11 @@ function getProjectGallery(media, galleryKey) {
 
 function getProjectCategory(section) {
   const haystack = `${section.title}\n${section.lines.join("\n")}`.toUpperCase();
-  if (/MEALNIMALS|VILAW|STARTUP|VENTURE|UNISTAY|EDUTYNKER/.test(haystack)) return "venture";
-  if (/LOGISTICS|CONTAINER|CONT-TECT|CẢNG|SUPPLY CHAIN|CHUỖI CUNG ỨNG/.test(haystack)) return "logistics";
-  if (/AI|TECH|AETERNA|BRAINWAVE|SIMULATION|AUTOMATED|DASHBOARD|PLATFORM/.test(haystack)) return "tech";
+  if (/CONT-TECT|MEAL-KIT|SAMSUNG|SUSTAINABLE COSMETICS|5T|CAMACO/.test(haystack)) return "logistics";
+  if (/MEALNIMALS|AGROBRICK|OVINA/.test(haystack)) return "venture";
+  if (/VILAW|AETERNA/.test(haystack)) return "tech";
+  if (/MANAGEMENT TRAINEE|HR REGENZ/.test(haystack)) return "strategy";
+  if (/DEBATE|TRIPLE KILLER/.test(haystack)) return "social";
   return "venture";
 }
 
