@@ -827,7 +827,7 @@ function createMediaEditorPanel(media, key) {
   panel.className = "media-editor-panel";
   panel.addEventListener("submit", async (event) => {
     event.preventDefault();
-    if (!urlInput.value.trim()) return;
+    if (urlInput.value.trim() === "") return; // Use Reset button to clear
     applyButton.textContent = "...";
     applyButton.disabled = true;
     try {
@@ -906,10 +906,30 @@ function createMediaEditorPanel(media, key) {
   const resetButton = document.createElement("button");
   resetButton.type = "button";
   resetButton.textContent = "Reset";
-  resetButton.addEventListener("click", () => {
-    urlInput.value = "";
-    writeStoredMediaOverride(key, "");
-    resetMediaSource(media);
+  resetButton.addEventListener("click", async () => {
+    resetButton.textContent = "...";
+    resetButton.disabled = true;
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        headers: { 'x-edit-token': UPLOAD_TOKEN, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ key, url: "" })
+      });
+      if (res.ok) {
+        urlInput.value = "";
+        writeStoredMediaOverride(key, "");
+        resetMediaSource(media);
+        alert("Đã khôi phục ảnh gốc thành công!");
+      } else {
+        const data = await res.json();
+        alert("Khôi phục thất bại: " + (data.error || "Unknown error"));
+      }
+    } catch (e) {
+      alert("Khôi phục thất bại: " + e.message);
+    } finally {
+      resetButton.textContent = "Reset";
+      resetButton.disabled = false;
+    }
   });
 
   panel.append(label, uploadButton, urlInput, applyButton, resetButton, fileInput);

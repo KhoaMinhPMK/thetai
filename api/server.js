@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 const UPLOAD_PASSWORD = process.env.UPLOAD_PASSWORD || 'sankit2026';
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '500mb' }));
 
 // Serve uploaded files statically
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -63,12 +63,14 @@ app.post('/api/upload', authenticate, upload.single('mediaFile'), (req, res) => 
         }
         
         let fileUrl;
+        let isDelete = false;
         if (req.file) {
             // file upload
             fileUrl = '/uploads/' + req.file.filename;
-        } else if (req.body.url) {
-            // direct url update
+        } else if (req.body.url !== undefined) {
+            // direct url update or delete
             fileUrl = req.body.url;
+            if (fileUrl.trim() === '') isDelete = true;
         } else {
             return res.status(400).json({ error: 'No file or url provided' });
         }
@@ -81,7 +83,11 @@ app.post('/api/upload', authenticate, upload.single('mediaFile'), (req, res) => 
             } catch (e) {}
         }
         
-        overrides[key] = fileUrl;
+        if (isDelete) {
+            delete overrides[key];
+        } else {
+            overrides[key] = fileUrl;
+        }
         fs.writeFileSync(OVERRIDES_FILE, JSON.stringify(overrides, null, 2), 'utf8');
 
         res.json({ success: true, url: fileUrl });
