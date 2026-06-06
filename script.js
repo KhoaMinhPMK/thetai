@@ -876,6 +876,7 @@ function createMediaEditorPanel(media, key) {
       if (res.ok && data.success) {
         setMediaSource(media, data.url);
         writeStoredMediaOverride(key, data.url);
+        urlInput.value = data.url; // Update input field to show the new uploaded path
         alert("Upload thành công!");
       } else {
         alert("Upload thất bại: " + (data.error || "Unknown error"));
@@ -894,8 +895,8 @@ function createMediaEditorPanel(media, key) {
   uploadButton.addEventListener("click", () => fileInput.click());
 
   const urlInput = document.createElement("input");
-  urlInput.type = "url";
-  urlInput.placeholder = "URL media";
+  urlInput.type = "text";
+  urlInput.placeholder = "URL or path (e.g. /uploads/...)";
   urlInput.value = readStoredMediaOverrides()[key] || MEDIA_OVERRIDES[key] || "";
 
   const applyButton = document.createElement("button");
