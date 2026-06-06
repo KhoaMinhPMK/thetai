@@ -8,7 +8,7 @@ const translations = {
     navContact: "Liên hệ",
     heroLabel: "Portfolio cá nhân",
     heroCopy:
-      "Một operator-builder có kỷ luật, được đào tạo qua kinh doanh quốc tế, logistics, supply chain, vận hành khởi nghiệp và giải quyết vấn đề dựa trên nghiên cứu.",
+      "Một người học có kỷ luật cao và năng lực vận hành thực chiến, với nền tảng mạnh về kinh doanh quốc tế, logistics, khởi nghiệp và giải quyết vấn đề dựa trên nghiên cứu.",
     heroCases: "Xem dự án",
     heroArchive: "Nội dung đầy đủ",
     statAchievements: "Thành tích học thuật",
@@ -28,17 +28,17 @@ const translations = {
     openAsset: "Mở tư liệu",
     sourceFile: "Source file",
   },
-  en: {
-    navProfile: "Profile",
-    navAcademics: "Academics",
-    navCases: "Cases",
-    navVentures: "Ventures",
-    navJournal: "Journal",
-    navContact: "Contact",
-    heroLabel: "Personal Portfolio",
-    heroCopy:
-      "A disciplined operator-builder trained across international business, logistics, supply chain, venture execution, and research-based problem solving.",
-    heroCases: "View Cases",
+    en: {
+      navProfile: "Profile",
+      navAcademics: "Academics",
+      navCases: "Cases",
+      navVentures: "Ventures",
+      navJournal: "Journal",
+      navContact: "Contact",
+      heroLabel: "Personal Portfolio",
+      heroCopy:
+        "A highly disciplined learner and practical operator, with a strong foundation in international business, logistics, entrepreneurship, and research-based problem solving.",
+      heroCases: "View Cases",
     heroArchive: "Full Content",
     statAchievements: "Academic achievements",
     statDegrees: "Top-tier degrees",
@@ -59,7 +59,19 @@ const translations = {
   },
 };
 
-const EDIT_MODE = "off";
+let EDIT_MODE = new URLSearchParams(window.location.search).get('edit') === 'true' || localStorage.getItem('sankit_edit_mode') === 'true';
+if (new URLSearchParams(window.location.search).get('edit') === 'true') {
+  localStorage.setItem('sankit_edit_mode', 'true');
+} else if (new URLSearchParams(window.location.search).get('edit') === 'false') {
+  localStorage.removeItem('sankit_edit_mode');
+  EDIT_MODE = false;
+}
+let UPLOAD_TOKEN = new URLSearchParams(window.location.search).get('token') || localStorage.getItem('sankit_upload_token') || '';
+if (new URLSearchParams(window.location.search).get('token')) {
+  localStorage.setItem('sankit_upload_token', UPLOAD_TOKEN);
+}
+
+window.REMOTE_OVERRIDES = {};
 const MEDIA_OVERRIDE_STORAGE_KEY = "duong-the-tai-media-overrides-v1";
 const GALLERY_STORAGE_KEY = "duong-the-tai-gallery-overrides-v1";
 const MEDIA_OVERRIDES = {
@@ -726,22 +738,17 @@ function bindLanguageToggle() {
 }
 
 function editModeEnabled() {
-  return String(EDIT_MODE).toLowerCase() === "on";
+  return EDIT_MODE;
 }
 
 function readStoredMediaOverrides() {
-  try {
-    return JSON.parse(localStorage.getItem(MEDIA_OVERRIDE_STORAGE_KEY) || "{}");
-  } catch {
-    return {};
-  }
+  return window.REMOTE_OVERRIDES || {};
 }
 
 function writeStoredMediaOverride(key, value) {
   const overrides = readStoredMediaOverrides();
   if (value) overrides[key] = value;
   else delete overrides[key];
-  localStorage.setItem(MEDIA_OVERRIDE_STORAGE_KEY, JSON.stringify(overrides));
 }
 
 function getVideoSource(video) {
@@ -818,11 +825,31 @@ function applyMediaOverrides() {
 function createMediaEditorPanel(media, key) {
   const panel = document.createElement("form");
   panel.className = "media-editor-panel";
-  panel.addEventListener("submit", (event) => {
+  panel.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!urlInput.value.trim()) return;
-    setMediaSource(media, urlInput.value.trim());
-    writeStoredMediaOverride(key, urlInput.value.trim());
+    applyButton.textContent = "...";
+    applyButton.disabled = true;
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        headers: { 'x-edit-token': UPLOAD_TOKEN, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ key, url: urlInput.value.trim() })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setMediaSource(media, urlInput.value.trim());
+        writeStoredMediaOverride(key, urlInput.value.trim());
+        alert("Cập nhật URL thành công!");
+      } else {
+        alert("Cập nhật thất bại: " + (data.error || "Unknown error"));
+      }
+    } catch (e) {
+      alert("Cập nhật thất bại: " + e.message);
+    } finally {
+      applyButton.textContent = "Áp dụng";
+      applyButton.disabled = false;
+    }
   });
 
   const label = document.createElement("span");
@@ -831,16 +858,34 @@ function createMediaEditorPanel(media, key) {
   const fileInput = document.createElement("input");
   fileInput.type = "file";
   fileInput.accept = media.tagName === "VIDEO" ? "video/*" : "image/*";
-  fileInput.addEventListener("change", () => {
+  fileInput.addEventListener("change", async () => {
     const file = fileInput.files?.[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      const value = String(reader.result || "");
-      setMediaSource(media, value);
-      writeStoredMediaOverride(key, value);
-    });
-    reader.readAsDataURL(file);
+    const formData = new FormData();
+    formData.append("key", key);
+    formData.append("mediaFile", file);
+    uploadButton.textContent = "Đang tải...";
+    uploadButton.disabled = true;
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        headers: { 'x-edit-token': UPLOAD_TOKEN },
+        body: formData
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setMediaSource(media, data.url);
+        writeStoredMediaOverride(key, data.url);
+        alert("Upload thành công!");
+      } else {
+        alert("Upload thất bại: " + (data.error || "Unknown error"));
+      }
+    } catch (e) {
+      alert("Upload thất bại: " + e.message);
+    } finally {
+      uploadButton.textContent = "Thay file";
+      uploadButton.disabled = false;
+    }
   });
 
   const uploadButton = document.createElement("button");
@@ -987,6 +1032,12 @@ function autoplayVideosWhenVisible() {
 }
 
 async function init() {
+  try {
+    const res = await fetch('/api/overrides');
+    if (res.ok) window.REMOTE_OVERRIDES = await res.json();
+  } catch(e) {
+    console.warn("Could not load overrides", e);
+  }
   renderSkills();
   bindViewTabs();
   bindLanguageToggle();

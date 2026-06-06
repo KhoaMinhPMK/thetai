@@ -10,12 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,760&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=2" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand-mark is-active" href="#home" data-view-link="home" aria-label="Dương Thế Tài portfolio home">
-        <span class="brand-sigil">DT</span>
+        <img class="brand-sigil" src="./avt.jpg" alt="DT" style="object-fit: cover;" />
         <span>Dương Thế Tài</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
@@ -45,8 +45,8 @@
         </picture>
         <div class="hero-scrim"></div>
         <div class="hero-content">
-          <div class="hero-orb" aria-hidden="true">
-            <span>DT</span>
+          <div class="hero-avatar">
+            <img src="./avt.jpg" alt="Dương Thế Tài" />
           </div>
           <div class="availability-pill">
             <span class="status-dot"></span>
@@ -57,10 +57,9 @@
             <span data-i18n="heroLabel">Personal Portfolio</span>
           </p>
           <h1 id="hero-title"><span>Dương Thế </span><span>Tài</span></h1>
-          <p class="hero-role">(2005) Supply Chain & Operations Trainee Candidate</p>
+          <p class="hero-role">Supply Chain & Operations Trainee Candidate</p>
           <p class="hero-copy" data-i18n="heroCopy">
-            A disciplined operator-builder trained across international business, logistics, supply chain,
-            venture execution, and research-based problem solving.
+            A highly disciplined learner and practical operator, with a strong foundation in international business, logistics, entrepreneurship, and research-based problem solving.
           </p>
           <div class="hero-actions">
             <a class="button light-button" href="#cases" data-view-link="cases">
@@ -102,10 +101,6 @@
             <span>System Overview 🖥️</span>
           </p>
           <h2>Portfolio Intelligence Layer 🧠</h2>
-          <p>
-            Một lớp tổng quan giúp người xem nắm nhanh năng lực lõi trước khi đi vào từng tab chi tiết 📊:
-            học thuật 📚, dự án 💼, venture 🚀, journal ✍️ và liên hệ 📞.
-          </p>
         </div>
 
         <div class="home-tile-grid">
@@ -135,13 +130,9 @@
           <div>
             <span class="signal-label">Current Focus 🎯</span>
             <h3>Supply Chain & Operations Trainee Candidate</h3>
-            <p>
-              Portfolio này được tổ chức như một dashboard năng lực 🎛️: mỗi tab là một cụm bằng chứng riêng 📁,
-              có hình ảnh 🖼️, tài liệu 📄 và nội dung đầy đủ để kiểm chứng ✅.
-            </p>
           </div>
           <div class="signal-metrics">
-            <span><strong>10</strong>Awards in 2025 🏆</span>
+            <span><strong>15</strong>Awards 🏆</span>
             <span><strong>500+</strong>Users onboarded 👥</span>
             <span><strong>90%</strong>Occupancy rate 📈</span>
             <span><strong>10K+</strong>Community members 🌟</span>
@@ -160,6 +151,7 @@
 
         <div class="profile-grid">
           <article class="profile-bio">
+            <img src="./avt.jpg" alt="Dương Thế Tài" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 24px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);" />
             <h3>Editorial Biography & Profile 📝</h3>
             <p class="large-copy">
               <strong>Dương Thế Tài (2005)</strong><br />
@@ -206,7 +198,7 @@
             <div>
               <span>Case 01</span>
               <h3>Global Product Marketing & Game Optimization Strategy 🎮</h3>
-              <a class="detail-button" href="#post-cases-10">Xem chi tiết</a>
+              <a class="detail-button" href="https://www.aeternagame.site/" target="_blank">Xem chi tiết</a>
             </div>
           </article>
           <article>
@@ -216,7 +208,7 @@
             <div>
               <span>Case 02</span>
               <h3>Automated Container Defect Inspection Simulation 🤖</h3>
-              <a class="detail-button" href="#post-cases-2">Xem chi tiết</a>
+              <a class="detail-button" href="./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters" target="_blank">📁 CONT-TECT - Motion Masters</a>
             </div>
           </article>
           <article>
@@ -224,7 +216,10 @@
             <div>
               <span>Case 03</span>
               <h3>End-To-End Scalable Supply Chain Model 🔄</h3>
-              <a class="detail-button" href="#post-cases-0">Xem chi tiết</a>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <a class="detail-button" href="https://www.mealnimals.me/" target="_blank">🔗 Website</a>
+                <a class="detail-button" href="https://www.facebook.com/share/r/1DBF5Je6dd/" target="_blank" style="background: transparent; border: 1px solid rgba(0, 184, 255, 0.4); color: var(--text-color);">▶️ FB Reel</a>
+              </div>
             </div>
           </article>
         </div>
@@ -242,7 +237,7 @@
 
         <div class="academic-band">
           <div class="academic-copy">
-            <h3>University Overview 🏫</h3>
+            <h3 style="margin-top: 0;">University Overview 🏫</h3>
             <p>
               The University of Economics Ho Chi Minh City (UEH) is one of the key national universities,
               with nearly 50 years of development, a high-quality faculty, and a wide-ranging
@@ -256,13 +251,27 @@
               universities worldwide according to Times Higher Education in 2025–2026.
             </p>
           </div>
-          <img data-media-id="academics-gpa" src="./Drive%20For%20Portfolio%20Website/5T_3.9/GPA.jpg" alt="GPA academic evidence" />
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <img src="./UEH%202.jpg" alt="UEH 2" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;" />
+            <img src="./UEH.jpg" alt="UEH" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;" />
+          </div>
         </div>
 
-        <div class="academic-gpa-card">
-          <span>Dual-Major Cumulative GPA</span>
-          <strong>International Business & Logistics and Supply Chain</strong>
-          <p>Academic evidence is attached as a visual record and can be replaced through edit mode.</p>
+        <div class="course-heading" style="text-align: center; border: none; background: none; margin-bottom: 0; padding-bottom: 0;">
+          <h3 style="margin: 0; font-size: clamp(24px, 3vw, 32px);">Dual-Major Cumulative GPA</h3>
+        </div>
+
+        <div class="academic-gpa-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin: 26px 0;">
+          <div class="academic-gpa-card" style="margin: 0;">
+            <strong>International Business</strong>
+            <p style="font-weight: 700; color: #00b8ff; margin: 8px 0; font-size: 1.1em;">GPA: 3.5 / 4.0</p>
+            <p>Academic evidence is attached as a visual record and can be replaced through edit mode.</p>
+          </div>
+          <div class="academic-gpa-card" style="margin: 0;">
+            <strong>Logistics And Supply Chain</strong>
+            <p style="font-weight: 700; color: #00b8ff; margin: 8px 0; font-size: 1.1em;">GPA: 3.5 / 4.0</p>
+            <p>Academic evidence is attached as a visual record and can be replaced through edit mode.</p>
+          </div>
         </div>
 
         <div class="course-heading">
@@ -276,7 +285,7 @@
             <h3>Enterprise Resource Planning 💻</h3>
             <p><strong>Grade:</strong> 4.0 / 4.0</p>
             <p><strong>Focus:</strong> Mastering Odoo system for Operations & Logistics management.</p>
-            <a class="detail-button" href="./Drive%20For%20Portfolio%20Website/ERP_-_G3_-_CTWINDOW___ODOO.mp4" target="_blank" rel="noreferrer">Xem chi tiết</a>
+            <a class="detail-button" href="./Drive%20For%20Portfolio%20Website/NHOM%207_ODOO_T%E1%BB%88%20L%E1%BB%86%20CHUY%E1%BB%82N%20%C4%90%E1%BB%94I%20T%E1%BB%AA%20SOCIAL%20MARKETING%20TH%E1%BA%A4P.mp4" target="_blank" rel="noreferrer">🎬 NHOM 7_ODOO_TỈ LỆ CHUYỂN ĐỔI TỪ SOCIAL MARKETING THẤP.mp4</a>
           </article>
           <article>
             <span>IBP</span>

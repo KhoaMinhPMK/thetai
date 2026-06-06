@@ -1,11 +1,25 @@
 version: '3.8'
 
 services:
+  tai-api:
+    build: ./api
+    image: tai-api:latest
+    container_name: tai-api
+    restart: always
+    environment:
+      - UPLOAD_PASSWORD=sankit2026
+    volumes:
+      - ./Drive For Portfolio Website/uploads:/app/uploads
+    networks:
+      - proxy
+
   tai-web:
     build: .
     image: tai-web:latest
     container_name: tai-web
     restart: always
+    volumes:
+      - ./Drive For Portfolio Website/uploads:/usr/share/nginx/html/uploads
     networks:
       - proxy
 
