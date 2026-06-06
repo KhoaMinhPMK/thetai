@@ -222,7 +222,7 @@ const mediaLibrary = [
   {
     keys: ["LOGISTICS", "CẢNG", "CHUỖI CUNG ỨNG"],
     title: "Logistics analysis",
-    url: "./Drive%20For%20Portfolio%20Website/CONT-TECT_-_Motion_Masters/MOTION_MASTERS___FINALE_ROUND___CONTTECT.pdf",
+    url: "./Drive%20For%20Portfolio%20Website/5T_3.9/5T.jpeg",
   },
 ];
 
