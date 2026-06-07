@@ -59,17 +59,8 @@ const translations = {
   },
 };
 
-let EDIT_MODE = new URLSearchParams(window.location.search).get('edit') === 'true' || localStorage.getItem('sankit_edit_mode') === 'true';
-if (new URLSearchParams(window.location.search).get('edit') === 'true') {
-  localStorage.setItem('sankit_edit_mode', 'true');
-} else if (new URLSearchParams(window.location.search).get('edit') === 'false') {
-  localStorage.removeItem('sankit_edit_mode');
-  EDIT_MODE = false;
-}
-let UPLOAD_TOKEN = new URLSearchParams(window.location.search).get('token') || localStorage.getItem('sankit_upload_token') || '';
-if (new URLSearchParams(window.location.search).get('token')) {
-  localStorage.setItem('sankit_upload_token', UPLOAD_TOKEN);
-}
+let EDIT_MODE = false;
+let UPLOAD_TOKEN = '';
 
 window.REMOTE_OVERRIDES = {};
 const MEDIA_OVERRIDE_STORAGE_KEY = "duong-the-tai-media-overrides-v1";
